@@ -1,0 +1,27 @@
+{
+  "name": "api-doc.GitHub.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:docs": "node ./publish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsxlsxxslxsl/api-doc.GitHub.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsxlsxxslxsl/api-doc.GitHub.io/issues"
+  },
+  "homepage": "https://github.com/lsxlsxxslxsl/api-doc.GitHub.io#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
