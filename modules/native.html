@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>native | eevee-helper - v0.0.1-alpha.4</title>
+	<title>native | eevee-helper - v0.0.1-alpha.6</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -24,7 +24,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-alpha.4</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-alpha.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -95,6 +95,22 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>初始化 Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#initnativeeventlistener" class="tsd-kind-icon">init<wbr>Native<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter"><a href="native.html#initsdk" class="tsd-kind-icon">init<wbr>Sdk</a></li>
+							</ul>
+							<h3>推拉流 Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#destroyrtcplay" class="tsd-kind-icon">destroy<wbr>Rtc<wbr>Play</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#destroyrtmp" class="tsd-kind-icon">destroy<wbr>Rtmp</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#initrtcpull" class="tsd-kind-icon">init<wbr>Rtc<wbr>Pull</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#initrtmp" class="tsd-kind-icon">init<wbr>Rtmp</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#startrtcpull" class="tsd-kind-icon">start<wbr>Rtc<wbr>Pull</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#startrtmp" class="tsd-kind-icon">start<wbr>Rtmp</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#stoprtcpull" class="tsd-kind-icon">stop<wbr>Rtc<wbr>Pull</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#stoprtmp" class="tsd-kind-icon">stop<wbr>Rtmp</a></li>
+							</ul>
 							<h3>窗口相关 Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#addelementdrag" class="tsd-kind-icon">add<wbr>Element<wbr>Drag</a></li>
@@ -114,6 +130,436 @@
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>初始化 Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="initnativeeventlistener" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> init<wbr>Native<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Native<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>初始化底层事件监听</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">initNativeEventListener</span><span style="color: #000000">()</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="initsdk" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> init<wbr>Sdk</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Sdk&lt;T&gt;<span class="tsd-signature-symbol">(</span>sdkType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PropertyValue</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iinitsdkargs.html" class="tsd-signature-type">IInitSdkArgs</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>初始化sdk</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../modules.html#sdktype" class="tsd-signature-type">SdkType</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sdkType: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>sdk类型 pyzx代表大班sdk，zby代表小班sdk</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">PropertyValue</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iinitsdkargs.html" class="tsd-signature-type">IInitSdkArgs</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>初始化参数，可选</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">pomelo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #008000">// 初始化大班sdk</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">initSdk</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;pyzx&#039;</span><span style="color: #000000">, { ... })</span>
+
+<span style="color: #008000">// 初始化小班sdk</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">args</span><span style="color: #000000"> = {</span>
+<span style="color: #001080">userId</span><span style="color: #000000">, </span><span style="color: #008000">// string | number,用户 id,必选</span>
+<span style="color: #001080">sid</span><span style="color: #000000">, </span><span style="color: #008000">// string, 转录视频流所需要的推流目标 sid ,必选</span>
+<span style="color: #001080">institutionId</span><span style="color: #000000">, </span><span style="color: #008000">// string | number,机构id,必选</span>
+<span style="color: #001080">userName</span><span style="color: #000000">, </span><span style="color: #008000">// string,小组内用户名,必选</span>
+<span style="color: #001080">role</span><span style="color: #000000">, </span><span style="color: #008000">// string,&#039;teacher&#039; | &#039;student&#039;,必选</span>
+<span style="color: #001080">roomId</span><span style="color: #000000">, </span><span style="color: #008000">// string | number, 小组房间id,即组 id,必选</span>
+<span style="color: #001080">teacherId</span><span style="color: #000000">, </span><span style="color: #008000">//string | number, 当前课程的老师 id,必选</span>
+<span style="color: #001080">channelToken</span><span style="color: #000000">, </span><span style="color: #008000">// string,信道 token, 必选</span>
+
+<span style="color: #008000">//以下为执行过设备检测后，需要指定设备进行初始化时才需要传递 devices 参数，如不需要指定，可以不传， SDK 会使用系统默认设备进行初始化</span>
+<span style="color: #001080">devices:</span><span style="color: #000000"> {</span>
+<span style="color: #001080">camera</span><span style="color: #000000">, </span><span style="color: #008000">// string,摄像头设备 id,可选</span>
+<span style="color: #001080">microphone</span><span style="color: #000000">, </span><span style="color: #008000">// string,麦克风设备 id,可选</span>
+<span style="color: #001080">speaker</span><span style="color: #000000"> </span><span style="color: #008000">// string,扬声器设备 id,可选</span>
+<span style="color: #000000">},</span>
+
+<span style="color: #001080">extension:</span><span style="color: #000000"> { </span><span style="color: #008000">// object,扩展相关信息,必选</span>
+<span style="color: #001080">version:</span><span style="color: #000000"> {</span>
+<span style="color: #001080">tool</span><span style="color: #000000">, </span><span style="color: #008000">// string,比如&#039;1.0.0.0&#039;,必选</span>
+<span style="color: #001080">rtc</span><span style="color: #000000">, </span><span style="color: #008000">// string,比如&#039;1.0.0.0&#039;,必选</span>
+<span style="color: #001080">zego</span><span style="color: #000000"> </span><span style="color: #008000">// string,比如&#039;1.0.0.0&#039;,必选</span>
+<span style="color: #000000">}</span>
+<span style="color: #000000">},</span>
+<span style="color: #000000">}</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">initSdk</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;zby&#039;</span><span style="color: #000000">, </span><span style="color: #001080">args</span><span style="color: #000000">)</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>推拉流 Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="destroyrtcplay" class="tsd-anchor"></a>
+					<h3>destroy<wbr>Rtc<wbr>Play</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">destroy<wbr>Rtc<wbr>Play<span class="tsd-signature-symbol">(</span>userId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, groupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>销毁rtc播放器</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>用户 id</p>
+									</div>
+								</li>
+								<li>
+									<h5>groupId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>房间/小组 id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">destroyRtcPlay</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="destroyrtmp" class="tsd-anchor"></a>
+					<h3>destroy<wbr>Rtmp</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">destroy<wbr>Rtmp<span class="tsd-signature-symbol">(</span>widgetId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>rtmp 销毁播放器</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>widgetId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>窗口 id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">destroyRtmp</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="initrtcpull" class="tsd-anchor"></a>
+					<h3>init<wbr>Rtc<wbr>Pull</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Rtc<wbr>Pull<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">InitRtcPullArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>初始化rtc拉流</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>args: <span class="tsd-signature-type">InitRtcPullArgs</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>初始化参数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">args</span><span style="color: #000000"> = {</span>
+<span style="color: #001080">userId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;11&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">groupId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;11&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">domId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#video&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">needPlayerId:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span>
+<span style="color: #000000">}</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">initRtcPull</span><span style="color: #000000">(</span><span style="color: #001080">args</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="initrtmp" class="tsd-anchor"></a>
+					<h3>init<wbr>Rtmp</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Rtmp<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">InitRtmpArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>初始化rtmp</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>args: <span class="tsd-signature-type">InitRtmpArgs</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>初始化参数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">pomelo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">args</span><span style="color: #000000"> = {</span>
+<span style="color: #001080">pos:</span><span style="color: #000000"> {</span>
+<span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #098658">720</span><span style="color: #000000">, </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #098658">1280</span>
+<span style="color: #000000">},</span>
+<span style="color: #001080">domId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;#video&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">urls:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">{</span>
+<span style="color: #001080">url:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;rtmp://xx.xx.xx.xx/xxx/xx_xx_1&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">lineId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tm&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">supplier:</span><span style="color: #000000"> </span><span style="color: #098658">1</span>
+<span style="color: #000000">}</span>
+<span style="color: #000000">], </span><span style="color: #008000">// 流地址列表</span>
+<span style="color: #000000">}</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">initRtmp</span><span style="color: #000000">(</span><span style="color: #001080">args</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">res</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+<span style="color: #000000">res: {</span>
+<span style="color: #001080">url</span><span style="color: #000000">, </span><span style="color: #008000">// 播放地址,</span>
+<span style="color: #001080">widgetId</span><span style="color: #000000">, </span><span style="color: #008000">// 窗口id</span>
+<span style="color: #000000">}</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="startrtcpull" class="tsd-anchor"></a>
+					<h3>start<wbr>Rtc<wbr>Pull</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">start<wbr>Rtc<wbr>Pull<span class="tsd-signature-symbol">(</span>userId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, groupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>开始rtc拉流</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>用户 id</p>
+									</div>
+								</li>
+								<li>
+									<h5>groupId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>小组 id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">startRtcPull</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="startrtmp" class="tsd-anchor"></a>
+					<h3>start<wbr>Rtmp</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">start<wbr>Rtmp<span class="tsd-signature-symbol">(</span>widgetId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>rtmp 开始播放</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>widgetId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>窗口 id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">startRtmp</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="stoprtcpull" class="tsd-anchor"></a>
+					<h3>stop<wbr>Rtc<wbr>Pull</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>Rtc<wbr>Pull<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">StopRtcPullArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>暂停rtc拉流</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>args: <span class="tsd-signature-type">StopRtcPullArgs</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>参数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">args</span><span style="color: #000000"> = {</span>
+<span style="color: #001080">userId :</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">groupId :</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;345&#039;</span><span style="color: #000000">,</span>
+<span style="color: #001080">recovery :</span><span style="color: #000000"> </span><span style="color: #001080">ture</span><span style="color: #000000">,</span>
+<span style="color: #001080">streamid :</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123_345_1&#039;</span>
+<span style="color: #000000">}</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">stopRtcPull</span><span style="color: #000000">(</span><span style="color: #001080">args</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="stoprtmp" class="tsd-anchor"></a>
+					<h3>stop<wbr>Rtmp</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>Rtmp<span class="tsd-signature-symbol">(</span>widgetId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>rtmp 停止播放</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>widgetId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>窗口 id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">stopRtmp</span><span style="color: #000000">(</span><span style="color: #098658">100</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
+</code></pre>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -556,8 +1002,11 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">useCommonInfo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
 <span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">setWindowSizeType</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;normal&#039;</span><span style="color: #000000">) </span><span style="color: #008000">// &#039;normal&#039; | &#039;min&#039; | &#039;max&#039; | &#039;full&#039;</span>
+
+<span style="color: #008000">// 获取窗口类型</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">winMode</span><span style="color: #000000"> } = </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">()</span>
 </code></pre>
 						</li>
 					</ul>
@@ -585,13 +1034,15 @@
 								</dd></dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">pomelo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">useCommonInfo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
 <span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInfo</span><span style="color: #000000">()</span>
 <span style="color: #000000">{</span>
 <span style="color: #A31515">&quot;version&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #A31515">&quot;systemName&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #A31515">&quot;time&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxx&quot;</span>
 <span style="color: #000000">}</span>
+<span style="color: #008000">// hooks</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000"> } = </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">()</span>
 </code></pre>
 						</li>
 					</ul>
@@ -612,10 +1063,28 @@
 						<a href="native.html#createwindow" class="tsd-kind-icon">create<wbr>Window</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#destroyrtcplay" class="tsd-kind-icon">destroy<wbr>Rtc<wbr>Play</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#destroyrtmp" class="tsd-kind-icon">destroy<wbr>Rtmp</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#getcurrentwindowid" class="tsd-kind-icon">get<wbr>Current<wbr>Window<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#getsysteminfo" class="tsd-kind-icon">get<wbr>System<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#initnativeeventlistener" class="tsd-kind-icon">init<wbr>Native<wbr>Event<wbr>Listener</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#initrtcpull" class="tsd-kind-icon">init<wbr>Rtc<wbr>Pull</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#initrtmp" class="tsd-kind-icon">init<wbr>Rtmp</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter root">
+						<a href="native.html#initsdk" class="tsd-kind-icon">init<wbr>Sdk</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#initwindowsize" class="tsd-kind-icon">init<wbr>Window<wbr>Size</a>
@@ -634,6 +1103,18 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#setwindowsizetype" class="tsd-kind-icon">set<wbr>Window<wbr>Size<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#startrtcpull" class="tsd-kind-icon">start<wbr>Rtc<wbr>Pull</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#startrtmp" class="tsd-kind-icon">start<wbr>Rtmp</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#stoprtcpull" class="tsd-kind-icon">stop<wbr>Rtc<wbr>Pull</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#stoprtmp" class="tsd-kind-icon">stop<wbr>Rtmp</a>
 					</li>
 				</ul>
 			</nav>
