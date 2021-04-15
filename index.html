@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>eevee-helper - v0.0.1-alpha.8</title>
+	<title>eevee-helper - v0.0.1-beta.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -24,7 +24,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="index.html" class="title">eevee-helper - v0.0.1-alpha.8</a>
+					<a href="index.html" class="title">eevee-helper - v0.0.1-beta.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -82,29 +82,45 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Project eevee-helper - v0.0.1-alpha.8</h1>
+			<h1>Project eevee-helper - v0.0.1-beta.0</h1>
 			<div class="tsd-panel tsd-typography">
-				<hr>
-				<p>home: true
-					actionText: 快速开始 →
-					actionLink: /guide/getting-started/
-					features:
-					- title: 规范检查
-					details: 集成编码规范、目录规范、git提交规范、样式规范、代码格式化工具
-					- title: 业务框架
-					details: 基于Lerna、TypeScript、Vue3、Vuex4、Vue Router4、Vite开发
-					- title: 单元测试
-					details: 函数仓库和物料仓库集成基于Jest的单元测试方案
-					- title: 函数仓库
-					details: 传统工具库结合Composition API，实现函数复用
-					- title: 物料仓库
-					details: 根据复用程度的不同，提供多层次的UI复用方式
-					- title: 开发工具
-					details: 通过多种命令，辅助物料、函数、工程配置的复用
-				footer: Copyright © 2020-Present Eevee</p>
-				<hr>
+				<a href="#工具函数" id="工具函数" style="color: inherit; text-decoration: none;">
+					<h1>工具函数</h1>
+				</a>
+				<p>函数仓库是 Eevee 生态下，函数复用的主要方式。函数仓库中，主要以业务逻辑为前提来实现抽象复用，上层不需要关注 API 内部的逻辑，只对外提供接口</p>
+				<a href="#开发理念" id="开发理念" style="color: inherit; text-decoration: none;">
+					<h2>开发理念</h2>
+				</a>
+				<p>我们推荐通过<code>测试驱动开发</code>（<a href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>）的思想，来逐渐完成函数仓库的积累。TDD 是敏捷开发中的一项核心实践和技术，也是一种设计方法论。TDD 的原理是在开发功能代码之前，先编写单元测试用例代码，测试代码确定需要编写什么产品代码。</p>
+				<a href="#项目结构" id="项目结构" style="color: inherit; text-decoration: none;">
+					<h2>项目结构</h2>
+				</a>
+				<pre><code class="language-sh-session">├── config # 构建相关脚本
+├── demo # 示例
+├── docs # 文档
+├── src # 项目代码
+│   ├── base # 基础类型
+│   │   ├── http # 请求库
+│   │   ├── event # 事件管理
+│   │   ├── broadcast # 广播消息
+│   │   ├── assist # 辅助工具类
+│   │   │   ├── util # 辅助方法
+│   ├── service # 业务类型
+│   │   ├── pomelo # webSocket
+│   │   ├── native-api # 大小班sdk
+│   │   ├── database # 数据仓库
+│   ├── hooks
+│   │   ├── usePomelo
+│   │   ├── useCommonInfo
+│   │   ├── useNative
+│   │   ├── useCountDown
+│   ├── enums # 枚举
+│   ├── types # 类型
+│   ├── index.ts # 入口文件
+├── test # 单元测试
+</code></pre>
 			</div>
-			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/api&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/api&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -114,6 +130,9 @@
 					</li>
 					<li class=" tsd-kind-reference root">
 						<a href="modules.html#sethttpconfig" class="tsd-kind-icon">set<wbr>Http<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-enum root">
+						<a href="enums/eventtypeenum.html" class="tsd-kind-icon">Event<wbr>Type<wbr>Enum</a>
 					</li>
 					<li class=" tsd-kind-enum root">
 						<a href="enums/extsenum.html" class="tsd-kind-icon">Exts<wbr>Enum</a>
@@ -159,6 +178,9 @@
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/iinitsdkargs.html" class="tsd-kind-icon">IInit<wbr>Sdk<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/isetconfigargs.html" class="tsd-kind-icon">ISet<wbr>Config<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/initpyzxargs.html" class="tsd-kind-icon">Init<wbr>Pyzx<wbr>Args</a>
@@ -215,6 +237,9 @@
 						<a href="modules.html#database" class="tsd-kind-icon">database</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter root">
+						<a href="modules.html#clearempty" class="tsd-kind-icon">clear<wbr>Empty</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter root">
 						<a href="modules.html#clearundef" class="tsd-kind-icon">clear<wbr>Undef</a>
 					</li>
 					<li class=" tsd-kind-function root">
@@ -260,6 +285,9 @@
 						<a href="modules.html#usecountdown" class="tsd-kind-icon">use<wbr>Count<wbr>Down</a>
 					</li>
 					<li class=" tsd-kind-function root">
+						<a href="modules.html#usenative" class="tsd-kind-icon">use<wbr>Native</a>
+					</li>
+					<li class=" tsd-kind-function root">
 						<a href="modules.html#usepomelo" class="tsd-kind-icon">use<wbr>Pomelo</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external root">
@@ -270,6 +298,9 @@
 					</li>
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#usewindowsize" class="tsd-kind-icon">use<wbr>Window<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-function root">
+						<a href="modules.html#uuid" class="tsd-kind-icon">uuid</a>
 					</li>
 				</ul>
 			</nav>
