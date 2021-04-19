@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>pomelo | eevee-helper - v0.0.1-beta.0</title>
+	<title>pomelo | eevee-helper - v0.0.1-beta.7</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -24,7 +24,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-beta.0</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-beta.7</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -114,7 +114,7 @@
 					<a name="sendmessage" class="tsd-anchor"></a>
 					<h3>send<wbr>Message</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Message<span class="tsd-signature-symbol">(</span>sendData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, channelType<span class="tsd-signature-symbol">?: </span><a href="../enums/pomelochannelenum.html" class="tsd-signature-type">PomeloChannelEnum</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Message<span class="tsd-signature-symbol">(</span>sendData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -126,7 +126,7 @@
 									<h5>sendData: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>channelType: <a href="../enums/pomelochannelenum.html" class="tsd-signature-type">PomeloChannelEnum</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<h5>channelKey: <a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -140,7 +140,7 @@
 					<a name="initpomelochannel" class="tsd-anchor"></a>
 					<h3>init<wbr>Pomelo<wbr>Channel</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">init<wbr>Pomelo<wbr>Channel<span class="tsd-signature-symbol">(</span>connectParams<span class="tsd-signature-symbol">: </span><a href="../interfaces/pomeloconnectparams.html" class="tsd-signature-type">PomeloConnectParams</a>, channelType<span class="tsd-signature-symbol">: </span><a href="../enums/pomelochannelenum.html" class="tsd-signature-type">PomeloChannelEnum</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Pomelo<wbr>Channel<span class="tsd-signature-symbol">(</span>connectParams<span class="tsd-signature-symbol">: </span><a href="../interfaces/pomeloconnectparams.html" class="tsd-signature-type">PomeloConnectParams</a>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -164,10 +164,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>channelType: <a href="../enums/pomelochannelenum.html" class="tsd-signature-type">PomeloChannelEnum</a></h5>
-									<div class="tsd-comment tsd-typography tsd-comment-text">
-										<p>频道类型</p>
-									</div>
+									<h5>channelKey: <a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -197,7 +194,7 @@
 					<a name="resetpomelostates" class="tsd-anchor"></a>
 					<h3>reset<wbr>Pomelo<wbr>States</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Pomelo<wbr>States<span class="tsd-signature-symbol">(</span>channelType<span class="tsd-signature-symbol">?: </span><a href="../enums/pomelochannelenum.html" class="tsd-signature-type">PomeloChannelEnum</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Pomelo<wbr>States<span class="tsd-signature-symbol">(</span>channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -215,10 +212,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>channelType: <a href="../enums/pomelochannelenum.html" class="tsd-signature-type">PomeloChannelEnum</a><span class="tsd-signature-symbol"> = ...</span></h5>
-									<div class="tsd-comment tsd-typography tsd-comment-text">
-										<p>频道类型</p>
-									</div>
+									<h5>channelKey: <a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
