@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>native | eevee-helper - v0.0.1-beta.14</title>
+	<title>native | eevee-helper - v0.0.1-beta.16</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -24,7 +24,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-beta.14</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-beta.16</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -112,6 +112,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#destroyrtmp" class="tsd-kind-icon">destroy<wbr>Rtmp</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#initrtcpull" class="tsd-kind-icon">init<wbr>Rtc<wbr>Pull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#initrtmp" class="tsd-kind-icon">init<wbr>Rtmp</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#pullaudioflow" class="tsd-kind-icon">pull<wbr>Audio<wbr>Flow</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#startrtcpull" class="tsd-kind-icon">start<wbr>Rtc<wbr>Pull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#startrtmp" class="tsd-kind-icon">start<wbr>Rtmp</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#stoprtcpull" class="tsd-kind-icon">stop<wbr>Rtc<wbr>Pull</a></li>
@@ -502,6 +503,47 @@
 <span style="color: #001080">url</span><span style="color: #000000">, </span><span style="color: #008000">// 播放地址,</span>
 <span style="color: #001080">widgetId</span><span style="color: #000000">, </span><span style="color: #008000">// 窗口id</span>
 <span style="color: #000000">}</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="pullaudioflow" class="tsd-anchor"></a>
+					<h3>pull<wbr>Audio<wbr>Flow</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">pull<wbr>Audio<wbr>Flow<span class="tsd-signature-symbol">(</span>playerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, operation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>通过播放器id控制用户声音开关(是否关闭音频流),</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>playerId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>播放器 id</p>
+									</div>
+								</li>
+								<li>
+									<h5>operation: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>true关闭声音 | false不关闭声音</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">pullAudioFlow</span><span style="color: #000000">(</span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #0000FF">true</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {...})</span>
 </code></pre>
 						</li>
 					</ul>
@@ -1134,9 +1176,11 @@
 							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">useCommonInfo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
 <span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInfo</span><span style="color: #000000">()</span>
 <span style="color: #000000">{</span>
+<span style="color: #000000">msg: {</span>
 <span style="color: #A31515">&quot;version&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #A31515">&quot;systemName&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #A31515">&quot;time&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxx&quot;</span>
+<span style="color: #000000">}</span>
 <span style="color: #000000">}</span>
 <span style="color: #008000">// hooks</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000"> } = </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">()</span>
@@ -1180,7 +1224,7 @@
 					</ul>
 				</section>
 			</section>
-			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/api&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -1229,6 +1273,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#loadpyzx" class="tsd-kind-icon">load<wbr>Pyzx</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#pullaudioflow" class="tsd-kind-icon">pull<wbr>Audio<wbr>Flow</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#removeelementdrag" class="tsd-kind-icon">remove<wbr>Element<wbr>Drag</a>
