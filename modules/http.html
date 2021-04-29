@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>http | eevee-helper - v0.0.1-beta.16</title>
+	<title>http | eevee-helper - v0.0.1-rc.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -24,7 +24,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-beta.16</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -95,6 +95,11 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>other Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="http.html#checkerror" class="tsd-kind-icon">check<wbr>Error</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="http.html#checkresponse" class="tsd-kind-icon">check<wbr>Response</a></li>
+							</ul>
 							<h3>接口请求 Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="http.html#all" class="tsd-kind-icon">all</a></li>
@@ -106,6 +111,65 @@
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>other Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="checkerror" class="tsd-anchor"></a>
+					<h3>check<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Error<span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AxiosError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AxiosError</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>axios响应错误过滤</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>err: <span class="tsd-signature-type">AxiosError</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AxiosError</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">object</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="checkresponse" class="tsd-anchor"></a>
+					<h3>check<wbr>Response</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Response<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>axios响应对象过滤</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <span class="tsd-signature-type">AxiosResponse</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>响应对象</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -200,6 +264,18 @@
 <span style="color: #000000">         </span><span style="color: #001080">headers:</span><span style="color: #000000"> { </span><span style="color: #001080">vsersion:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;1.0.0.0 </span><span style="color: #CD3131">}</span>
 <span style="color: #000000">     }</span>
 <span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">()...</span>
+
+<span style="color: #008000">// 自定义重试次数</span>
+<span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span>
+<span style="color: #000000">     </span><span style="color: #A31515">&#039;/user/12345&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     {},</span>
+<span style="color: #000000">     {</span>
+<span style="color: #A31515">&#039;axios-retry&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
+<span style="color: #001080">retries:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">},</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">()...</span>
+
 </code></pre>
 						</li>
 					</ul>
@@ -412,6 +488,12 @@
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 							<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">setHttpConfig</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
 <span style="color: #795E26">setHttpConfig</span><span style="color: #000000">({</span>
+<span style="color: #000000">     </span><span style="color: #008000">// 重试次数</span>
+<span style="color: #000000">     </span><span style="color: #001080">retries:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #008000">// 重试延迟</span>
+<span style="color: #000000">     </span><span style="color: #795E26">retryDelay</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #008000">// 重试条件</span>
+<span style="color: #000000">     </span><span style="color: #795E26">retryCondition</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">err</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
 <span style="color: #000000">     </span><span style="color: #008000">// 超时时间</span>
 <span style="color: #000000">     </span><span style="color: #001080">timeout:</span><span style="color: #000000"> </span><span style="color: #098658">5000</span><span style="color: #000000">,</span>
 <span style="color: #000000">     </span><span style="color: #008000">// 自定义拦截器</span>
@@ -433,6 +515,12 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="http.html#all" class="tsd-kind-icon">all</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="http.html#checkerror" class="tsd-kind-icon">check<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="http.html#checkresponse" class="tsd-kind-icon">check<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter root">
 						<a href="http.html#get" class="tsd-kind-icon">get</a>
