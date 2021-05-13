@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>native | eevee-helper - v0.0.1-rc.1</title>
+	<title>native | eevee-helper - v0.0.1-rc.2</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -24,7 +24,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.1</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.2</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -135,6 +135,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#getsysteminfo" class="tsd-kind-icon">get<wbr>System<wbr>Info</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#jumppage" class="tsd-kind-icon">jump<wbr>Page</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#settoolpausereportinfo" class="tsd-kind-icon">set<wbr>Tool<wbr>Pause<wbr>Report<wbr>Info</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#settoolreportinfo" class="tsd-kind-icon">set<wbr>Tool<wbr>Report<wbr>Info</a></li>
 							</ul>
 						</section>
 					</div>
@@ -1223,6 +1225,73 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="settoolpausereportinfo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> set<wbr>Tool<wbr>Pause<wbr>Report<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tool<wbr>Pause<wbr>Report<wbr>Info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>取消设置tool拓展链路打点</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">setToolPauseReportInfo</span><span style="color: #000000">()</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="settoolreportinfo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> set<wbr>Tool<wbr>Report<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tool<wbr>Report<wbr>Info<span class="tsd-signature-symbol">(</span>userId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, liveId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置tool拓展链路打点基础参数</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>用户id</p>
+									</div>
+								</li>
+								<li>
+									<h5>liveId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>直播讲id</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">setToolReportInfo</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;xn00000&#039;</span><span style="color: #000000">, </span><span style="color: #098658">16011123</span><span style="color: #000000">)</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
@@ -1285,6 +1354,12 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter root">
 						<a href="native.html#setsdkconfig" class="tsd-kind-icon">set<wbr>Sdk<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#settoolpausereportinfo" class="tsd-kind-icon">set<wbr>Tool<wbr>Pause<wbr>Report<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#settoolreportinfo" class="tsd-kind-icon">set<wbr>Tool<wbr>Report<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#setwindowmode" class="tsd-kind-icon">set<wbr>Window<wbr>Mode</a>
