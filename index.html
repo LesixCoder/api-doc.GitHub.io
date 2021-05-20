@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>eevee-helper - v0.0.1-rc.2</title>
+	<title>eevee-helper - v0.0.1-rc.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -24,7 +25,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="index.html" class="title">eevee-helper - v0.0.1-rc.2</a>
+					<a href="index.html" class="title">eevee-helper - v0.0.1-rc.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -82,16 +83,12 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Project eevee-helper - v0.0.1-rc.2</h1>
+			<h1>Project eevee-helper - v0.0.1-rc.3</h1>
 			<div class="tsd-panel tsd-typography">
 				<a href="#工具函数" id="工具函数" style="color: inherit; text-decoration: none;">
 					<h1>工具函数</h1>
 				</a>
 				<p>函数仓库是 Eevee 生态下，函数复用的主要方式。函数仓库中，主要以业务逻辑为前提来实现抽象复用，上层不需要关注 API 内部的逻辑，只对外提供接口</p>
-				<a href="#开发理念" id="开发理念" style="color: inherit; text-decoration: none;">
-					<h2>开发理念</h2>
-				</a>
-				<p>我们推荐通过<code>测试驱动开发</code>（<a href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>）的思想，来逐渐完成函数仓库的积累。TDD 是敏捷开发中的一项核心实践和技术，也是一种设计方法论。TDD 的原理是在开发功能代码之前，先编写单元测试用例代码，测试代码确定需要编写什么产品代码。</p>
 				<a href="#项目结构" id="项目结构" style="color: inherit; text-decoration: none;">
 					<h2>项目结构</h2>
 				</a>
@@ -118,6 +115,29 @@
 │   ├── types # 类型
 │   ├── index.ts # 入口文件
 ├── test # 单元测试
+</code></pre>
+				<a href="#使用方式" id="使用方式" style="color: inherit; text-decoration: none;">
+					<h2>使用方式</h2>
+				</a>
+				<p>example:</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">http</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">, { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> });</span>
+</code></pre>
+				<a href="#开发指南" id="开发指南" style="color: inherit; text-decoration: none;">
+					<h2>开发指南</h2>
+				</a>
+				<blockquote>
+					<p>参考文档： <a href="https://typedoc.org/">typedoc</a></p>
+				</blockquote>
+				<pre><code class="language-sh"><span style="color: #008000"># 构建文档</span>
+<span style="color: #000000">pnpm build:docs</span>
+
+<span style="color: #008000"># 发布文档</span>
+<span style="color: #000000">pnpm publish:docs</span>
+
+<span style="color: #008000"># 发布工具库</span>
+<span style="color: #000000">pnpm publish:lib</span>
 </code></pre>
 			</div>
 			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
