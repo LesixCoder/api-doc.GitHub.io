@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>eevee-helper - v0.0.1-rc.3</title>
+	<title>eevee-helper - v0.0.1-rc.6</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -25,7 +25,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="index.html" class="title">eevee-helper - v0.0.1-rc.3</a>
+					<a href="index.html" class="title">eevee-helper - v0.0.1-rc.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -83,53 +83,15 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Project eevee-helper - v0.0.1-rc.3</h1>
+			<h1>Project eevee-helper - v0.0.1-rc.6</h1>
 			<div class="tsd-panel tsd-typography">
 				<a href="#工具函数" id="工具函数" style="color: inherit; text-decoration: none;">
 					<h1>工具函数</h1>
 				</a>
 				<p>函数仓库是 Eevee 生态下，函数复用的主要方式。函数仓库中，主要以业务逻辑为前提来实现抽象复用，上层不需要关注 API 内部的逻辑，只对外提供接口</p>
-				<a href="#项目结构" id="项目结构" style="color: inherit; text-decoration: none;">
-					<h2>项目结构</h2>
+				<a href="#命令" id="命令" style="color: inherit; text-decoration: none;">
+					<h2>命令</h2>
 				</a>
-				<pre><code class="language-sh-session">├── config # 构建相关脚本
-├── demo # 示例
-├── docs # 文档
-├── src # 项目代码
-│   ├── base # 基础类型
-│   │   ├── http # 请求库
-│   │   ├── event # 事件管理
-│   │   ├── broadcast # 广播消息
-│   │   ├── assist # 辅助工具类
-│   │   │   ├── util # 辅助方法
-│   ├── service # 业务类型
-│   │   ├── pomelo # webSocket
-│   │   ├── native-api # 大小班sdk
-│   │   ├── database # 数据仓库
-│   ├── hooks
-│   │   ├── usePomelo
-│   │   ├── useCommonInfo
-│   │   ├── useNative
-│   │   ├── useCountDown
-│   ├── enums # 枚举
-│   ├── types # 类型
-│   ├── index.ts # 入口文件
-├── test # 单元测试
-</code></pre>
-				<a href="#使用方式" id="使用方式" style="color: inherit; text-decoration: none;">
-					<h2>使用方式</h2>
-				</a>
-				<p>example:</p>
-				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">http</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
-
-<span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">, { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> });</span>
-</code></pre>
-				<a href="#开发指南" id="开发指南" style="color: inherit; text-decoration: none;">
-					<h2>开发指南</h2>
-				</a>
-				<blockquote>
-					<p>参考文档： <a href="https://typedoc.org/">typedoc</a></p>
-				</blockquote>
 				<pre><code class="language-sh"><span style="color: #008000"># 构建文档</span>
 <span style="color: #000000">pnpm build:docs</span>
 
@@ -139,6 +101,332 @@
 <span style="color: #008000"># 发布工具库</span>
 <span style="color: #000000">pnpm publish:lib</span>
 </code></pre>
+				<a href="#架构图" id="架构图" style="color: inherit; text-decoration: none;">
+					<h2>架构图</h2>
+				</a>
+				<p><img src="./source/img/1.jpg" alt="链路"></p>
+				<a href="#项目结构" id="项目结构" style="color: inherit; text-decoration: none;">
+					<h2>项目结构</h2>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">├── config </span><span style="color: #008000"># 构建相关脚本</span>
+<span style="color: #000000">├── demo </span><span style="color: #008000"># 示例</span>
+<span style="color: #000000">├── docs </span><span style="color: #008000"># 文档</span>
+<span style="color: #000000">├── src </span><span style="color: #008000"># 项目代码</span>
+<span style="color: #000000">│   │</span>
+<span style="color: #000000">│   ├── base </span><span style="color: #008000"># 基础类型</span>
+<span style="color: #000000">│   │   │</span>
+<span style="color: #000000">│   │   ├── http </span><span style="color: #008000"># 请求库</span>
+<span style="color: #000000">│   │   │   ├── get、put、post、all、jsonp 基础请求方法</span>
+<span style="color: #000000">│   │   │   ├── setHttpConfig 初始化http设置(超时时间、重试次数、重试延迟、拦截器)</span>
+<span style="color: #000000">│   │   │</span>
+<span style="color: #000000">│   │   ├── broadcast </span><span style="color: #008000"># 广播事件</span>
+<span style="color: #000000">│   │   │   ├── dispatch 事件派发</span>
+<span style="color: #000000">│   │   │   ├── sub 事件监听</span>
+<span style="color: #000000">│   │   │   ├── unsub 取消事件监听</span>
+<span style="color: #000000">│   │   │</span>
+<span style="color: #000000">│   │   ├── assist </span><span style="color: #008000"># 辅助工具类</span>
+<span style="color: #000000">│   │       ├── storage </span><span style="color: #008000"># 支持过期时间的localStorage工具</span>
+<span style="color: #000000">│   │       ├── copy </span><span style="color: #008000"># 复制到剪贴板</span>
+<span style="color: #000000">│   │       ├── formulaRender </span><span style="color: #008000"># 公式解析</span>
+<span style="color: #000000">│   │       ├── dateFormat </span><span style="color: #008000"># 时间格式化</span>
+<span style="color: #000000">│   │       ├── uuid </span><span style="color: #008000"># 生成uuid</span>
+<span style="color: #000000">│   │</span>
+<span style="color: #000000">│   ├── service </span><span style="color: #008000"># 业务类型</span>
+<span style="color: #000000">│   │   │</span>
+<span style="color: #000000">│   │   ├── pomelo</span>
+<span style="color: #000000">│   │   │   ├── initPomeloChannel </span><span style="color: #008000"># 初始化pomelo</span>
+<span style="color: #000000">│   │   │   ├── resetPomeloStates </span><span style="color: #008000"># 重置pomelo</span>
+<span style="color: #000000">│   │   │   ├── sendMessage </span><span style="color: #008000"># 发送pomelo消息</span>
+<span style="color: #000000">│   │   │</span>
+<span style="color: #000000">│   │   ├── native-api </span><span style="color: #008000"># 大小班sdk、底层api</span>
+<span style="color: #000000">│   │   │   │</span>
+<span style="color: #000000">│   │   │   ├── common </span><span style="color: #008000"># 公共方法</span>
+<span style="color: #000000">│   │   │   │   ├── getSystemInfo </span><span style="color: #008000"># 获取系统信息</span>
+<span style="color: #000000">│   │   │   │   ├── jumpPage </span><span style="color: #008000"># 跳转</span>
+<span style="color: #000000">│   │   │   │   ├── setToolReportInfo </span><span style="color: #008000"># native基础信息上报</span>
+<span style="color: #000000">│   │   │   │</span>
+<span style="color: #000000">│   │   │   ├── flow </span><span style="color: #008000"># 推拉流相关</span>
+<span style="color: #000000">│   │   │       ├── rtmp </span><span style="color: #008000"># 拉流相关</span>
+<span style="color: #000000">│   │   │       ├── rtc </span><span style="color: #008000"># 拉流相关</span>
+<span style="color: #000000">│   │   │   │</span>
+<span style="color: #000000">│   │   │   ├── window </span><span style="color: #008000"># 窗口操作相关</span>
+<span style="color: #000000">│   │   │       ├── setWindowMode </span><span style="color: #008000"># 设置窗口模式</span>
+<span style="color: #000000">│   │   │       ├── setWindowSize </span><span style="color: #008000"># 设置窗口位置及大小</span>
+<span style="color: #000000">│   │   │       ├── setWindowSizeLimit </span><span style="color: #008000"># 限制窗口大小</span>
+<span style="color: #000000">│   │   │       ├── initWindowSize </span><span style="color: #008000"># 初始化窗口大小（setWindowSize和setWindowSizeLimit组合）</span>
+<span style="color: #000000">│   │   │       ├── getCurrentWindowId </span><span style="color: #008000"># 获取当前窗口id</span>
+<span style="color: #000000">│   │   │       ├── sendWindowMessage </span><span style="color: #008000"># 向指定窗口发送消息</span>
+<span style="color: #000000">│   │   │       ├── createWindow </span><span style="color: #008000"># 创建新窗口</span>
+<span style="color: #000000">│   │   │       ├── closeWindow </span><span style="color: #008000"># 关闭窗口</span>
+<span style="color: #000000">│   │   │       ├── setWindowTop </span><span style="color: #008000"># 设置（取消）窗口置顶</span>
+<span style="color: #000000">│   │   │</span>
+<span style="color: #000000">│   │   ├── database </span><span style="color: #008000"># 数据仓库（内部私有，不对外）</span>
+<span style="color: #000000">│   │</span>
+<span style="color: #000000">│   ├── hooks</span>
+<span style="color: #000000">│   │   ├── usePomelo</span>
+<span style="color: #000000">│   │   │       ├── connectStatus  </span><span style="color: #008000"># 连接状态</span>
+<span style="color: #000000">│   │   │       ├── isReconnect  </span><span style="color: #008000"># 是否重连</span>
+<span style="color: #000000">│   │   │       ├── reconnectTimes  </span><span style="color: #008000"># 重连次数</span>
+<span style="color: #000000">│   │   │       ├── isKicked  </span><span style="color: #008000"># 是否被踢</span>
+<span style="color: #000000">│   │   │       ├── serveMsg  </span><span style="color: #008000"># 下行消息</span>
+<span style="color: #000000">│   │   │       ├── chatMsg  </span><span style="color: #008000"># 聊天消息</span>
+<span style="color: #000000">│   │   │       ├── noticeMsg  </span><span style="color: #008000"># 通知消息</span>
+<span style="color: #000000">│   │   ├── useCommonInfo</span>
+<span style="color: #000000">│   │   │       ├── clientVersion  </span><span style="color: #008000"># 客户端版本号</span>
+<span style="color: #000000">│   │   │       ├── winMode  </span><span style="color: #008000"># 窗口模式（最大、最小化）</span>
+<span style="color: #000000">│   │   │       ├── guid  </span><span style="color: #008000"># 设备id</span>
+<span style="color: #000000">│   │   │       ├── systemName  </span><span style="color: #008000"># 系统名称</span>
+<span style="color: #000000">│   │   │       ├── rtcPullAddress  </span><span style="color: #008000"># rtc拉流地址</span>
+<span style="color: #000000">│   │   ├── useNative</span>
+<span style="color: #000000">│   │           ├── sdkLoadMsg </span><span style="color: #008000"># sdk消息</span>
+<span style="color: #000000">│   │           ├── sdkLoadStatus </span><span style="color: #008000"># sdk加载状态</span>
+<span style="color: #000000">│   │</span>
+<span style="color: #000000">│   ├── enums </span><span style="color: #008000"># 枚举</span>
+<span style="color: #000000">│   ├── types </span><span style="color: #008000"># 类型</span>
+<span style="color: #000000">│   ├── index.ts </span><span style="color: #008000"># 入口</span>
+<span style="color: #000000">├── </span><span style="color: #795E26">test</span><span style="color: #000000"> </span><span style="color: #008000"># 单元测试</span>
+</code></pre>
+				<a href="#使用amp扩展" id="使用amp扩展" style="color: inherit; text-decoration: none;">
+					<h2>使用&amp;扩展</h2>
+				</a>
+				<a href="#一、base-基础功能" id="一、base-基础功能" style="color: inherit; text-decoration: none;">
+					<h3>一、base 基础功能</h3>
+				</a>
+				<a href="#1-http-请求" id="1-http-请求" style="color: inherit; text-decoration: none;">
+					<h4>1. http 请求</h4>
+				</a>
+				<p><strong>初始化配置</strong></p>
+				<pre><code class="language-ts"><span style="color: #795E26">setHttpConfig</span><span style="color: #000000">({</span>
+<span style="color: #000000">    </span><span style="color: #001080">timeout:</span><span style="color: #000000"> </span><span style="color: #098658">5000</span><span style="color: #000000">, </span><span style="color: #008000">// 超时（默认5000）</span>
+<span style="color: #000000">    </span><span style="color: #001080">retries:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #008000">// 重试次数（默认0，该配置针对所有接口生效）</span>
+<span style="color: #000000">    </span><span style="color: #795E26">retryDelay</span><span style="color: #001080">:</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #008000">// 重试延迟</span>
+<span style="color: #000000">    </span><span style="color: #001080">interceptors:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #795E26">request</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">config</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">            </span><span style="color: #008000">// 处理config</span>
+<span style="color: #000000">            ...</span>
+<span style="color: #000000">            </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">config</span><span style="color: #000000">;</span>
+<span style="color: #000000">        },</span>
+<span style="color: #000000">        </span><span style="color: #795E26">requestError</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">err</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">err</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #795E26">response</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">res</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #795E26">responseError</span><span style="color: #001080">:</span><span style="color: #000000"> (</span><span style="color: #001080">err</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">err</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<p><strong>常规使用:</strong></p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">http</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">, { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> });</span>
+</code></pre>
+				<p><strong>自定义 headers</strong></p>
+				<pre><code class="language-ts"><span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">        </span><span style="color: #001080">headers:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">            </span><span style="color: #001080">token:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        },</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">);</span>
+</code></pre>
+				<p><strong>针对单个接口的自动重试</strong></p>
+				<pre><code class="language-ts"><span style="color: #008000">// 2 为重试两次，加上首次请求总计为3次</span>
+<span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">        </span><span style="color: #A31515">&#039;axios-retry&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">            </span><span style="color: #001080">retries:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">        },</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">);</span>
+</code></pre>
+				<a href="#2-broadcast-广播事件" id="2-broadcast-广播事件" style="color: inherit; text-decoration: none;">
+					<h4>2. broadcast 广播事件</h4>
+				</a>
+				<p>适用于多窗口下的消息通知场景</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">broadcast</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// 注意：broadcast使用前提需要每个窗口都先调用initBroadcast</span>
+<span style="color: #795E26">initBroadcast</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;mix_teacher&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">eventType</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">    </span><span style="color: #001080">GLOBAL_REFRESH:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;GLOBAL_REFRESH&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #008000">// 派发事件</span>
+<span style="color: #001080">broadcast</span><span style="color: #000000">.</span><span style="color: #795E26">dispatch</span><span style="color: #000000">(</span><span style="color: #001080">eventType</span><span style="color: #000000">.</span><span style="color: #0070C1">GLOBAL_REFRESH</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;刷新消息&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">broadcast</span><span style="color: #000000">.</span><span style="color: #795E26">on</span><span style="color: #000000">(</span><span style="color: #001080">eventType</span><span style="color: #000000">.</span><span style="color: #0070C1">GLOBAL_REFRESH</span><span style="color: #000000">, (</span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// res - &#039;刷新消息&#039;</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<a href="#3-storage-缓存对象" id="3-storage-缓存对象" style="color: inherit; text-decoration: none;">
+					<h4>3. storage 缓存对象</h4>
+				</a>
+				<p>默认使用 localStorage 作为缓存载体</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">storage</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// 设置缓存并添加过期时间（以小时为单位）</span>
+<span style="color: #001080">storage</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;token&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 获取缓存</span>
+<span style="color: #001080">storage</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;token&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// 清除缓存</span>
+<span style="color: #001080">storage</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;token&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#二、service-业务功能" id="二、service-业务功能" style="color: inherit; text-decoration: none;">
+					<h3>二、service 业务功能</h3>
+				</a>
+				<p>业务侧主要分为 native 部分及 pomelo 部分</p>
+				<a href="#1-native-api" id="1-native-api" style="color: inherit; text-decoration: none;">
+					<h4>1. native-api</h4>
+				</a>
+				<p>目前 native 按功能划分为以下几大类：</p>
+				<ul>
+					<li>  公共部分</li>
+					<li>  推拉流</li>
+					<li>  初始化</li>
+					<li>  窗口操作</li>
+				</ul>
+				<p>如果需要新增功能类别，需要在 native-api 下新创建功能类别文件开发，比如说要开发设备相关 api，需要在 <code>native-api</code> 下新建 <code>device.ts</code> 文件。以获取摄像头列表为例</p>
+				<pre><code class="language-ts"><span style="color: #008000">// src/service/native-api/device.ts</span>
+
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">zby</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;zby-live-sdk&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">promiseErrorHandle</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./util&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">getCameraDeviceList</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">promiseErrorHandle</span><span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">zby</span><span style="color: #000000">.</span><span style="color: #795E26">getCameraDeviceList</span><span style="color: #000000">();</span>
+<span style="color: #000000">    });</span>
+<span style="color: #000000">};</span>
+</code></pre>
+				<blockquote>
+					<p>注意：<code>promiseErrorHandle</code> 方法是内部用于统一错误处理的函数</p>
+				</blockquote>
+				<p>然后需要在 index 下导出该文件</p>
+				<pre><code class="language-ts"><span style="color: #008000">// src/service/native-api/index.ts</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">*</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./device&#039;</span><span style="color: #000000">;</span>
+</code></pre>
+				<a href="#2-pomelo" id="2-pomelo" style="color: inherit; text-decoration: none;">
+					<h4>2. pomelo</h4>
+				</a>
+				<p>pomelo 的状态及事件主要通过 hooks 提供</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">pomelo</span><span style="color: #000000">, </span><span style="color: #001080">usePomelo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// 首先通过初始化 pomelo 主讲频道内部状态和事件</span>
+<span style="color: #001080">pomelo</span><span style="color: #000000">.</span><span style="color: #795E26">initPomeloChannel</span><span style="color: #000000">(</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">        </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">port:</span><span style="color: #000000"> </span><span style="color: #098658">443</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">userID:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">channelID:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">userName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">roleID:</span><span style="color: #000000"> </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #008000">// 1: 学生；2：辅导老师    4 授课</span>
+<span style="color: #000000">        </span><span style="color: #001080">classID:</span><span style="color: #000000"> </span><span style="color: #001080">xxxxxxx</span><span style="color: #000000">, </span><span style="color: #008000">// liveId</span>
+<span style="color: #000000">        </span><span style="color: #001080">protocolVersion:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;1.0&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">interactMode:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">mainTeacherClientVer:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;0.0.0.0&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">uniqId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxxxxxxxxxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">rtype:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;main&#039;</span>
+<span style="color: #000000">);</span>
+
+<span style="color: #008000">// 使用主讲频道</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">connectStatus</span><span style="color: #000000">, </span><span style="color: #0070C1">serveMsg</span><span style="color: #000000"> } = </span><span style="color: #795E26">usePomelo</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;main&#039;</span><span style="color: #000000">);</span>
+<span style="color: #008000">// 监听下行消息</span>
+<span style="color: #795E26">watch</span><span style="color: #000000">(</span><span style="color: #001080">serveMsg</span><span style="color: #000000">, (</span><span style="color: #001080">val</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<p><strong>新增频道</strong></p>
+				<p>需要在 <code>src/enums/socketEnum.ts</code> 下 <code>PomeloChannelEnum</code> 和 <code>PomeloChannelKeyEnum</code> 扩展频道</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">enum</span><span style="color: #000000"> </span><span style="color: #267F99">PomeloChannelEnum</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">LECTURER_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;LECTURER_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">TUTOR_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">GROUP_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;GROUP_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">TUTOR_SOLO</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_SOLO&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">enum</span><span style="color: #000000"> </span><span style="color: #267F99">PomeloChannelKeyEnum</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">main</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;LECTURER_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">tutor</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">group</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;GROUP_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0070C1">solo</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_SOLO&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#三、hooks" id="三、hooks" style="color: inherit; text-decoration: none;">
+					<h3>三、hooks</h3>
+				</a>
+				<p>以 commonInfo 使用为例</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">useCommonInfo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000">, </span><span style="color: #0070C1">winMode</span><span style="color: #000000">, </span><span style="color: #0070C1">guid</span><span style="color: #000000">, </span><span style="color: #0070C1">systemName</span><span style="color: #000000">, </span><span style="color: #0070C1">rtcPullAddress</span><span style="color: #000000"> } = </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">();</span>
+</code></pre>
+				<p><strong>如何开发</strong></p>
+				<p>目前 hooks 大多使用场景都集中在业务数据上，而工具库的业务数据统一由 <code>database</code> 管理，<code>hooks</code> 直接拿来消费。以 <code>useCommonInfo</code> 为例，比如我们只使用客户端版本号</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">computed</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;vue&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">database</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;../service/database&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #AF00DB">default</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">() {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000"> = </span><span style="color: #795E26">computed</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">database</span><span style="color: #000000">.</span><span style="color: #001080">systemState</span><span style="color: #000000">.</span><span style="color: #001080">version</span><span style="color: #000000">);</span>
+
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">clientVersion</span><span style="color: #000000">,</span>
+<span style="color: #000000">    };</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p>而客户端版本号是由大班 sdk 提供的，逻辑如下：</p>
+				<pre><code class="language-ts"><span style="color: #008000">// src/service/native-api/common</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">pyzx</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;pyzx-live-sdk&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">getSystemInfo</span><span style="color: #000000">(): </span><span style="color: #267F99">Promise</span><span style="color: #000000">&lt;</span><span style="color: #267F99">object</span><span style="color: #000000">&gt; {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">promiseErrorHandle</span><span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">pyzx</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInformation</span><span style="color: #000000">();</span>
+<span style="color: #000000">        </span><span style="color: #795E26">sendMsgSyncStore</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;systemState&#039;</span><span style="color: #000000">, </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">msg</span><span style="color: #000000">.</span><span style="color: #001080">version</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;version&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">        </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">msg</span><span style="color: #000000">;</span>
+<span style="color: #000000">    });</span>
+<span style="color: #000000">}</span>
+<span style="color: #008000">// {</span>
+<span style="color: #008000">//     msg: {</span>
+<span style="color: #008000">//         &quot;version&quot;:&quot;xxxxxxxx&quot;,</span>
+<span style="color: #008000">//         &quot;systemName&quot;:&quot;xxxxxxxx&quot;,</span>
+<span style="color: #008000">//         &quot;guid&quot;: &quot;xxxxxxx&quot;,</span>
+<span style="color: #008000">//         &quot;time&quot;:&quot;xxxxxxx&quot;,</span>
+<span style="color: #008000">//     }</span>
+<span style="color: #008000">// }</span>
+</code></pre>
+				<blockquote>
+					<p>注意：<code>sendMsgSyncStore</code> 方法是工具库内部用来做数据同步的方法</p>
+				</blockquote>
+				<p>database 结构如下：</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">database</span><span style="color: #000000">: </span><span style="color: #267F99">Database</span><span style="color: #000000"> = </span><span style="color: #795E26">reactive</span><span style="color: #000000">({</span>
+<span style="color: #000000">    ...,</span>
+<span style="color: #000000">    </span><span style="color: #001080">systemState:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">version:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">guid:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">systemName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<a href="#本地开发" id="本地开发" style="color: inherit; text-decoration: none;">
+					<h2>本地开发</h2>
+				</a>
+				<p>需要在项目下 link 工具库</p>
+				<pre><code class="language-sh"><span style="color: #008000"># 工具库路径</span>
+<span style="color: #000000">pnpm link ../eevee/packages/helper</span>
+</code></pre>
+				<p>开发完成之后使用 <code>pnpm publish:lib</code> 进行版本发布</p>
+				<p><img src="./source/img/2.png" alt="链路"></p>
+				<p>描述信息不用填写，选择之后会自动发布到 npm 并生成<code>CHANGELOG</code>(确保有发布权限)</p>
+				<a href="#文档开发指南" id="文档开发指南" style="color: inherit; text-decoration: none;">
+					<h2>文档开发指南</h2>
+				</a>
+				<blockquote>
+					<p>参考文档： <a href="https://typedoc.org/">typedoc</a></p>
+				</blockquote>
 			</div>
 			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
@@ -219,6 +507,9 @@
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/pomeloconnectparams.html" class="tsd-kind-icon">Pomelo<wbr>Connect<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/pomelostore.html" class="tsd-kind-icon">Pomelo<wbr>Store</a>
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/rtcpulladdress.html" class="tsd-kind-icon">Rtc<wbr>Pull<wbr>Address</a>

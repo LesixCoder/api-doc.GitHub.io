@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>native | eevee-helper - v0.0.1-rc.3</title>
+	<title>native | eevee-helper - v0.0.1-rc.6</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -25,7 +25,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.3</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.6</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -131,6 +131,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowmode" class="tsd-kind-icon">set<wbr>Window<wbr>Mode</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowsize" class="tsd-kind-icon">set<wbr>Window<wbr>Size</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowsizelimit" class="tsd-kind-icon">set<wbr>Window<wbr>Size<wbr>Limit</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowtop" class="tsd-kind-icon">set<wbr>Window<wbr>Top</a></li>
 							</ul>
 							<h3>通用 Functions</h3>
 							<ul class="tsd-index-list">
@@ -1153,6 +1154,47 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="setwindowtop" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> set<wbr>Window<wbr>Top</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Window<wbr>Top<span class="tsd-signature-symbol">(</span>isTop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, isDisableMin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置（取消）窗口置顶</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>isTop: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>是否置顶</p>
+									</div>
+								</li>
+								<li>
+									<h5>isDisableMin: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>置顶时是否禁用最小化(1.只针对win有效，mac无此场景；2.禁用只针对任务栏点击时的最小化，UI界面的最小化由JS自行控制；3.取消置顶后同时也会取消禁用最小化)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">setWindowTop</span><span style="color: #000000">(</span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #0000FF">false</span><span style="color: #000000">)</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>通用 Functions</h2>
@@ -1160,7 +1202,7 @@
 					<a name="getsysteminfo" class="tsd-anchor"></a>
 					<h3>get<wbr>System<wbr>Info</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>System<wbr>Info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>System<wbr>Info<span class="tsd-signature-symbol">(</span>opt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1175,6 +1217,17 @@
 									<dd><p>v0.0.1</p>
 								</dd></dl>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>opt: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>is<wbr>Native<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000">, </span><span style="color: #001080">useCommonInfo</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
 <span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInfo</span><span style="color: #000000">()</span>
@@ -1182,8 +1235,15 @@
 <span style="color: #000000">msg: {</span>
 <span style="color: #A31515">&quot;version&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #A31515">&quot;systemName&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
-<span style="color: #A31515">&quot;time&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxx&quot;</span>
+<span style="color: #A31515">&quot;guid&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;xxxxxxx&quot;</span><span style="color: #000000">,</span>
+<span style="color: #A31515">&quot;time&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #000000">}</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInfo</span><span style="color: #000000">({</span><span style="color: #001080">isNative:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">})</span>
+<span style="color: #000000">{</span>
+<span style="color: #A31515">&quot;version&quot;</span><span style="color: #000000">:</span><span style="color: #A31515">&quot;xxxxxxxx&quot;</span><span style="color: #000000">,</span>
+<span style="color: #A31515">&quot;guid&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;xxxxxxx&quot;</span><span style="color: #000000">,</span>
 <span style="color: #000000">}</span>
 <span style="color: #008000">// hooks</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000"> } = </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">()</span>
@@ -1370,6 +1430,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#setwindowsizelimit" class="tsd-kind-icon">set<wbr>Window<wbr>Size<wbr>Limit</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#setwindowtop" class="tsd-kind-icon">set<wbr>Window<wbr>Top</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#startrtcpull" class="tsd-kind-icon">start<wbr>Rtc<wbr>Pull</a>
