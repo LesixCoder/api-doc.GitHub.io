@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>native | eevee-helper - v0.0.1-rc.6</title>
+	<title>native | eevee-helper - v0.0.1-rc.8</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -25,7 +25,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.6</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.1-rc.8</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -125,9 +125,11 @@
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#closewindow" class="tsd-kind-icon">close<wbr>Window</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#createwindow" class="tsd-kind-icon">create<wbr>Window</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#getcurrentwindowid" class="tsd-kind-icon">get<wbr>Current<wbr>Window<wbr>Id</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#getwindowinfo" class="tsd-kind-icon">get<wbr>Window<wbr>Info</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#initwindowsize" class="tsd-kind-icon">init<wbr>Window<wbr>Size</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#removeelementdrag" class="tsd-kind-icon">remove<wbr>Element<wbr>Drag</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#sendwindowmessage" class="tsd-kind-icon">send<wbr>Window<wbr>Message</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#settransparentcolor" class="tsd-kind-icon">set<wbr>Transparent<wbr>Color</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowmode" class="tsd-kind-icon">set<wbr>Window<wbr>Mode</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowsize" class="tsd-kind-icon">set<wbr>Window<wbr>Size</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="native.html#setwindowsizelimit" class="tsd-kind-icon">set<wbr>Window<wbr>Size<wbr>Limit</a></li>
@@ -872,6 +874,37 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getwindowinfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Window<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Window<wbr>Info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>获取窗口信息</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">getWindowInfo</span><span style="color: #000000">()</span>
+<span style="color: #000000">{</span>
+<span style="color: #A31515">&quot;screen_dpi&quot;</span><span style="color: #000000"> : </span><span style="color: #098658">1.0</span><span style="color: #000000">,</span>
+<span style="color: #A31515">&quot;window_heigth&quot;</span><span style="color: #000000"> : </span><span style="color: #098658">1040</span><span style="color: #000000">,</span>
+<span style="color: #A31515">&quot;window_width&quot;</span><span style="color: #000000"> : </span><span style="color: #098658">1920</span>
+<span style="color: #000000">}</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="initwindowsize" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> init<wbr>Window<wbr>Size</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
@@ -1000,6 +1033,41 @@
 <span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">sendWindowMessage</span><span style="color: #000000">({</span>
 <span style="color: #000000">     </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xes&#039;</span>
 <span style="color: #000000">}, </span><span style="color: #098658">1</span><span style="color: #000000">)</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="settransparentcolor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> set<wbr>Transparent<wbr>Color</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Transparent<wbr>Color<span class="tsd-signature-symbol">(</span>transparentColor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置（取消）窗口背景色透明</p>
+								</div>
+								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>引入版本</dt>
+									<dd><p>v0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>transparentColor: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;&#x27;</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>透明色值 空字符表示取消设置透明色 0xFF+css的rgb值</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">native</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@peiyou/eevee-helper&#039;</span><span style="color: #000000">;</span>
+<span style="color: #001080">native</span><span style="color: #000000">.</span><span style="color: #795E26">setTransparentColor</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;0xFF2B2557&#039;</span><span style="color: #000000">)</span>
 </code></pre>
 						</li>
 					</ul>
@@ -1381,6 +1449,9 @@
 						<a href="native.html#getsysteminfo" class="tsd-kind-icon">get<wbr>System<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#getwindowinfo" class="tsd-kind-icon">get<wbr>Window<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#initnativeeventlistener" class="tsd-kind-icon">init<wbr>Native<wbr>Event<wbr>Listener</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
@@ -1421,6 +1492,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#settoolreportinfo" class="tsd-kind-icon">set<wbr>Tool<wbr>Report<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="native.html#settransparentcolor" class="tsd-kind-icon">set<wbr>Transparent<wbr>Color</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
 						<a href="native.html#setwindowmode" class="tsd-kind-icon">set<wbr>Window<wbr>Mode</a>
