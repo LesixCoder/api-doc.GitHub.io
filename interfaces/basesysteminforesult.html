@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DataSyncOpt | eevee-helper - v0.0.2-beta.10</title>
+	<title>BaseSystemInfoResult | eevee-helper - v0.0.2-beta.10</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,7 +56,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="datasyncopt.html">DataSyncOpt</a>
+					<a href="basesysteminforesult.html">BaseSystemInfoResult</a>
 				</li>
 			</ul>
 		</div>
@@ -74,12 +74,12 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Interface DataSyncOpt</h1>
+			<h1>Interface BaseSystemInfoResult</h1>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">DataSyncOpt</span>
+						<span class="target">BaseSystemInfoResult</span>
 					</li>
 				</ul>
 			</section>
@@ -89,10 +89,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="datasyncopt.html#issyncallstore" class="tsd-kind-icon">is<wbr>Sync<wbr>All<wbr>Store</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="datasyncopt.html#issynccur" class="tsd-kind-icon">is<wbr>Sync<wbr>Cur</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="datasyncopt.html#key" class="tsd-kind-icon">key</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="datasyncopt.html#onlycurrent" class="tsd-kind-icon">only<wbr>Current</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="basesysteminforesult.html#disk" class="tsd-kind-icon">disk</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="basesysteminforesult.html#hardware" class="tsd-kind-icon">hardware</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="basesysteminforesult.html#net" class="tsd-kind-icon">net</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="basesysteminforesult.html#system" class="tsd-kind-icon">system</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,30 +101,30 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="issyncallstore" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Sync<wbr>All<wbr>Store</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Sync<wbr>All<wbr>Store<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="disk" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> disk</h3>
+					<div class="tsd-signature tsd-kind-icon">disk<span class="tsd-signature-symbol">:</span> <a href="diskinfo.html" class="tsd-signature-type">DiskInfo</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="issynccur" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Sync<wbr>Cur</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Sync<wbr>Cur<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="hardware" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hardware</h3>
+					<div class="tsd-signature tsd-kind-icon">hardware<span class="tsd-signature-symbol">:</span> <a href="hardware.html" class="tsd-signature-type">Hardware</a></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="key" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> key</h3>
-					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="net" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> net</h3>
+					<div class="tsd-signature tsd-kind-icon">net<span class="tsd-signature-symbol">:</span> <a href="netinfo.html" class="tsd-signature-type">NetInfo</a></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="onlycurrent" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> only<wbr>Current</h3>
-					<div class="tsd-signature tsd-kind-icon">only<wbr>Current<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="system" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> system</h3>
+					<div class="tsd-signature tsd-kind-icon">system<span class="tsd-signature-symbol">:</span> <a href="systeminfo.html" class="tsd-signature-type">SystemInfo</a></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -137,19 +137,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface root">
-						<a href="datasyncopt.html" class="tsd-kind-icon">Data<wbr>Sync<wbr>Opt</a>
+						<a href="basesysteminforesult.html" class="tsd-kind-icon">Base<wbr>System<wbr>Info<wbr>Result</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="datasyncopt.html#issyncallstore" class="tsd-kind-icon">is<wbr>Sync<wbr>All<wbr>Store</a>
+								<a href="basesysteminforesult.html#disk" class="tsd-kind-icon">disk</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="datasyncopt.html#issynccur" class="tsd-kind-icon">is<wbr>Sync<wbr>Cur</a>
+								<a href="basesysteminforesult.html#hardware" class="tsd-kind-icon">hardware</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="datasyncopt.html#key" class="tsd-kind-icon">key</a>
+								<a href="basesysteminforesult.html#net" class="tsd-kind-icon">net</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="datasyncopt.html#onlycurrent" class="tsd-kind-icon">only<wbr>Current</a>
+								<a href="basesysteminforesult.html#system" class="tsd-kind-icon">system</a>
 							</li>
 						</ul>
 					</li>

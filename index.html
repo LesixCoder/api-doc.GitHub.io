@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>eevee-helper - v0.0.2-alpha.1</title>
+	<title>eevee-helper - v0.0.2-beta.10</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -25,7 +25,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="index.html" class="title">eevee-helper - v0.0.2-alpha.1</a>
+					<a href="index.html" class="title">eevee-helper - v0.0.2-beta.10</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -77,13 +77,16 @@
 						<a href="modules/native.html">native</a>
 					</li>
 					<li class=" tsd-kind-namespace">
+						<a href="modules/oss.html">oss</a>
+					</li>
+					<li class=" tsd-kind-namespace">
 						<a href="modules/pomelo.html">pomelo</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Project eevee-helper - v0.0.2-alpha.1</h1>
+			<h1>Project eevee-helper - v0.0.2-beta.10</h1>
 			<div class="tsd-panel tsd-typography">
 				<a href="#工具函数" id="工具函数" style="color: inherit; text-decoration: none;">
 					<h1>工具函数</h1>
@@ -219,25 +222,25 @@
 </code></pre>
 				<p><strong>自定义 headers</strong></p>
 				<pre><code class="language-ts"><span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span>
-<span style="color: #000000">    </span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> },</span>
-<span style="color: #000000">    {</span>
-<span style="color: #000000">        </span><span style="color: #001080">headers:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">            </span><span style="color: #001080">token:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        },</span>
-<span style="color: #000000">    }</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">headers:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">token:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">  }</span>
 <span style="color: #000000">);</span>
 </code></pre>
 				<p><strong>针对单个接口的自动重试</strong></p>
 				<pre><code class="language-ts"><span style="color: #008000">// 2 为重试两次，加上首次请求总计为3次</span>
 <span style="color: #001080">http</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span>
-<span style="color: #000000">    </span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> },</span>
-<span style="color: #000000">    {</span>
-<span style="color: #000000">        </span><span style="color: #A31515">&#039;axios-retry&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">            </span><span style="color: #001080">retries:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
-<span style="color: #000000">        },</span>
-<span style="color: #000000">    }</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&#039;api.peiyou.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  { </span><span style="color: #001080">aaa:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;123&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&#039;axios-retry&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">retries:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">  }</span>
 <span style="color: #000000">);</span>
 </code></pre>
 				<a href="#2-broadcast-广播事件" id="2-broadcast-广播事件" style="color: inherit; text-decoration: none;">
@@ -250,14 +253,14 @@
 <span style="color: #795E26">initBroadcast</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;mix_teacher&#039;</span><span style="color: #000000">);</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">eventType</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">    </span><span style="color: #001080">GLOBAL_REFRESH:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;GLOBAL_REFRESH&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">GLOBAL_REFRESH:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;GLOBAL_REFRESH&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">};</span>
 
 <span style="color: #008000">// 派发事件</span>
 <span style="color: #001080">broadcast</span><span style="color: #000000">.</span><span style="color: #795E26">dispatch</span><span style="color: #000000">(</span><span style="color: #001080">eventType</span><span style="color: #000000">.</span><span style="color: #0070C1">GLOBAL_REFRESH</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;刷新消息&#039;</span><span style="color: #000000">);</span>
 
 <span style="color: #001080">broadcast</span><span style="color: #000000">.</span><span style="color: #795E26">on</span><span style="color: #000000">(</span><span style="color: #001080">eventType</span><span style="color: #000000">.</span><span style="color: #0070C1">GLOBAL_REFRESH</span><span style="color: #000000">, (</span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #008000">// res - &#039;刷新消息&#039;</span>
+<span style="color: #000000">  </span><span style="color: #008000">// res - &#039;刷新消息&#039;</span>
 <span style="color: #000000">});</span>
 </code></pre>
 				<a href="#3-storage-缓存对象" id="3-storage-缓存对象" style="color: inherit; text-decoration: none;">
@@ -287,43 +290,43 @@
 <span style="color: #008000"> * 默认表名: store_name</span>
 <span style="color: #008000"> */</span>
 <span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #008000">/**</span>
-<span style="color: #008000">     * 设置缓存,返回key (传入新的表名会新建表)</span>
-<span style="color: #008000">     * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{IDBValidKey}</span><span style="color: #008000"> </span><span style="color: #001080">key</span>
-<span style="color: #008000">     * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #001080">value</span>
-<span style="color: #008000">     * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{number | undefined}</span><span style="color: #008000"> </span><span style="color: #001080">expired</span><span style="color: #008000">  过期时间,以小时为单位,不传或传0代表永不过期</span>
-<span style="color: #008000">     * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{string | undefined}</span><span style="color: #008000"> </span><span style="color: #001080">storeName</span>
-<span style="color: #008000">     * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{string | undefined}</span><span style="color: #008000"> </span><span style="color: #001080">dbName</span>
-<span style="color: #008000">     */</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;value&#039;</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;value&#039;</span><span style="color: #000000">, {</span>
-<span style="color: #000000">        </span><span style="color: #001080">expired:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">storeName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    });</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;value&#039;</span><span style="color: #000000">, {</span>
-<span style="color: #000000">        </span><span style="color: #001080">expired:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">storeName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">dbName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    });</span>
+<span style="color: #000000">  </span><span style="color: #008000">/**</span>
+<span style="color: #008000">   * 设置缓存,返回key (传入新的表名会新建表)</span>
+<span style="color: #008000">   * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{IDBValidKey}</span><span style="color: #008000"> </span><span style="color: #001080">key</span>
+<span style="color: #008000">   * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #001080">value</span>
+<span style="color: #008000">   * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{number | undefined}</span><span style="color: #008000"> </span><span style="color: #001080">expired</span><span style="color: #008000">  过期时间,以小时为单位,不传或传0代表永不过期</span>
+<span style="color: #008000">   * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{string | undefined}</span><span style="color: #008000"> </span><span style="color: #001080">storeName</span>
+<span style="color: #008000">   * </span><span style="color: #0000FF">@param</span><span style="color: #008000"> </span><span style="color: #267F99">{string | undefined}</span><span style="color: #008000"> </span><span style="color: #001080">dbName</span>
+<span style="color: #008000">   */</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;value&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;value&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">    </span><span style="color: #001080">expired:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">storeName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  });</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;value&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">    </span><span style="color: #001080">expired:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">storeName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">dbName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  });</span>
 
-<span style="color: #000000">    </span><span style="color: #008000">//  获取缓存</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #001080">log</span><span style="color: #000000">).</span><span style="color: #795E26">catch</span><span style="color: #000000">(</span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #001080">log</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #008000">//  获取缓存</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #001080">log</span><span style="color: #000000">).</span><span style="color: #795E26">catch</span><span style="color: #000000">(</span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #001080">log</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">);</span>
 
-<span style="color: #000000">    </span><span style="color: #008000">//  清除缓存</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #008000">//  清除缓存</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;key&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">);</span>
 
-<span style="color: #000000">    </span><span style="color: #008000">//  清理所有缓存或某库某表的缓存</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">clear</span><span style="color: #000000">();</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">clear</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">clear</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #008000">//  清理所有缓存或某库某表的缓存</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">clear</span><span style="color: #000000">();</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">clear</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">clear</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;tableName&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;dbName&#039;</span><span style="color: #000000">);</span>
 
-<span style="color: #000000">    </span><span style="color: #008000">//  删除数据库</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">deleteDB</span><span style="color: #000000">();</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">deleteDB</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;db_name&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #008000">//  删除数据库</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">deleteDB</span><span style="color: #000000">();</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">db</span><span style="color: #000000">.</span><span style="color: #795E26">deleteDB</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;db_name&#039;</span><span style="color: #000000">);</span>
 <span style="color: #000000">})();</span>
 </code></pre>
 				<a href="#二、service-业务功能" id="二、service-业务功能" style="color: inherit; text-decoration: none;">
@@ -335,10 +338,10 @@
 				</a>
 				<p>目前 native 按功能划分为以下几大类：</p>
 				<ul>
-					<li>  公共部分</li>
-					<li>  推拉流</li>
-					<li>  初始化</li>
-					<li>  窗口操作</li>
+					<li>公共部分</li>
+					<li>推拉流</li>
+					<li>初始化</li>
+					<li>窗口操作</li>
 				</ul>
 				<p>如果需要新增功能类别，需要在 native-api 下新创建功能类别文件开发，比如说要开发设备相关 api，需要在 <code>native-api</code> 下新建 <code>device.ts</code> 文件。以获取摄像头列表为例</p>
 				<pre><code class="language-ts"><span style="color: #008000">// src/service/native-api/device.ts</span>
@@ -347,9 +350,9 @@
 <span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">promiseErrorHandle</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./util&#039;</span><span style="color: #000000">;</span>
 
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">getCameraDeviceList</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">promiseErrorHandle</span><span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">zby</span><span style="color: #000000">.</span><span style="color: #795E26">getCameraDeviceList</span><span style="color: #000000">();</span>
-<span style="color: #000000">    });</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">promiseErrorHandle</span><span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">zby</span><span style="color: #000000">.</span><span style="color: #795E26">getCameraDeviceList</span><span style="color: #000000">();</span>
+<span style="color: #000000">  });</span>
 <span style="color: #000000">};</span>
 </code></pre>
 				<blockquote>
@@ -368,44 +371,44 @@
 
 <span style="color: #008000">// 首先通过初始化 pomelo 主讲频道内部状态和事件</span>
 <span style="color: #001080">pomelo</span><span style="color: #000000">.</span><span style="color: #795E26">initPomeloChannel</span><span style="color: #000000">(</span>
-<span style="color: #000000">    {</span>
-<span style="color: #000000">        </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxxxxxx&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">port:</span><span style="color: #000000"> </span><span style="color: #098658">443</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">userID:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxx&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">channelID:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">userName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxx&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">roleID:</span><span style="color: #000000"> </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #008000">// 1: 学生；2：辅导老师    4 授课</span>
-<span style="color: #000000">        </span><span style="color: #001080">classID:</span><span style="color: #000000"> </span><span style="color: #001080">xxxxxxx</span><span style="color: #000000">, </span><span style="color: #008000">// liveId</span>
-<span style="color: #000000">        </span><span style="color: #001080">protocolVersion:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;1.0&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">interactMode:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">mainTeacherClientVer:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;0.0.0.0&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">uniqId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxxxxxxxxxxxxxxx&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">rtype:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
-<span style="color: #000000">    },</span>
-<span style="color: #000000">    </span><span style="color: #A31515">&#039;main&#039;</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">host:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">port:</span><span style="color: #000000"> </span><span style="color: #098658">443</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">userID:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">channelID:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">userName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">roleID:</span><span style="color: #000000"> </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #008000">// 1: 学生；2：辅导老师    4 授课</span>
+<span style="color: #000000">    </span><span style="color: #001080">classID:</span><span style="color: #000000"> </span><span style="color: #001080">xxxxxxx</span><span style="color: #000000">, </span><span style="color: #008000">// liveId</span>
+<span style="color: #000000">    </span><span style="color: #001080">protocolVersion:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;1.0&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">interactMode:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">mainTeacherClientVer:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;0.0.0.0&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">uniqId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;xxxxxxxxxxxxxxxxxxxxx&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">rtype:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&#039;main&#039;</span>
 <span style="color: #000000">);</span>
 
 <span style="color: #008000">// 使用主讲频道</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">connectStatus</span><span style="color: #000000">, </span><span style="color: #0070C1">serveMsg</span><span style="color: #000000"> } = </span><span style="color: #795E26">usePomelo</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;main&#039;</span><span style="color: #000000">);</span>
 <span style="color: #008000">// 监听下行消息</span>
 <span style="color: #795E26">watch</span><span style="color: #000000">(</span><span style="color: #001080">serveMsg</span><span style="color: #000000">, (</span><span style="color: #001080">val</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
 <span style="color: #000000">});</span>
 </code></pre>
 				<p><strong>新增频道</strong></p>
 				<p>需要在 <code>src/enums/socketEnum.ts</code> 下 <code>PomeloChannelEnum</code> 和 <code>PomeloChannelKeyEnum</code> 扩展频道</p>
 				<pre><code class="language-ts"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">enum</span><span style="color: #000000"> </span><span style="color: #267F99">PomeloChannelEnum</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">LECTURER_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;LECTURER_TEACHER&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">TUTOR_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_TEACHER&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">GROUP_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;GROUP_TEACHER&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">TUTOR_SOLO</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_SOLO&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">LECTURER_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;LECTURER_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">TUTOR_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">GROUP_TEACHER</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;GROUP_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">TUTOR_SOLO</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_SOLO&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">}</span>
 
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">enum</span><span style="color: #000000"> </span><span style="color: #267F99">PomeloChannelKeyEnum</span><span style="color: #000000"> {</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">main</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;LECTURER_TEACHER&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">tutor</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_TEACHER&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">group</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;GROUP_TEACHER&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #0070C1">solo</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_SOLO&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">main</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;LECTURER_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">tutor</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">group</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;GROUP_TEACHER&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">solo</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;TUTOR_SOLO&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">}</span>
 </code></pre>
 				<a href="#三、hooks" id="三、hooks" style="color: inherit; text-decoration: none;">
@@ -422,11 +425,11 @@
 <span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">database</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;../service/database&#039;</span><span style="color: #000000">;</span>
 
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #AF00DB">default</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">useCommonInfo</span><span style="color: #000000">() {</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000"> = </span><span style="color: #795E26">computed</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">database</span><span style="color: #000000">.</span><span style="color: #001080">systemState</span><span style="color: #000000">.</span><span style="color: #001080">version</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">clientVersion</span><span style="color: #000000"> = </span><span style="color: #795E26">computed</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">database</span><span style="color: #000000">.</span><span style="color: #001080">systemState</span><span style="color: #000000">.</span><span style="color: #001080">version</span><span style="color: #000000">);</span>
 
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #001080">clientVersion</span><span style="color: #000000">,</span>
-<span style="color: #000000">    };</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">clientVersion</span><span style="color: #000000">,</span>
+<span style="color: #000000">  };</span>
 <span style="color: #000000">}</span>
 </code></pre>
 				<p>而客户端版本号是由大班 sdk 提供的，逻辑如下：</p>
@@ -434,11 +437,11 @@
 <span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">pyzx</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;pyzx-live-sdk&#039;</span><span style="color: #000000">;</span>
 
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">getSystemInfo</span><span style="color: #000000">(): </span><span style="color: #267F99">Promise</span><span style="color: #000000">&lt;</span><span style="color: #267F99">object</span><span style="color: #000000">&gt; {</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">promiseErrorHandle</span><span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">pyzx</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInformation</span><span style="color: #000000">();</span>
-<span style="color: #000000">        </span><span style="color: #795E26">sendMsgSyncStore</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;systemState&#039;</span><span style="color: #000000">, </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">msg</span><span style="color: #000000">.</span><span style="color: #001080">version</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;version&#039;</span><span style="color: #000000">);</span>
-<span style="color: #000000">        </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">msg</span><span style="color: #000000">;</span>
-<span style="color: #000000">    });</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">promiseErrorHandle</span><span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">pyzx</span><span style="color: #000000">.</span><span style="color: #795E26">getSystemInformation</span><span style="color: #000000">();</span>
+<span style="color: #000000">    </span><span style="color: #795E26">sendMsgSyncStore</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;systemState&#039;</span><span style="color: #000000">, </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">msg</span><span style="color: #000000">.</span><span style="color: #001080">version</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;version&#039;</span><span style="color: #000000">);</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">msg</span><span style="color: #000000">;</span>
+<span style="color: #000000">  });</span>
 <span style="color: #000000">}</span>
 <span style="color: #008000">// {</span>
 <span style="color: #008000">//     msg: {</span>
@@ -479,7 +482,7 @@
 					<p>参考文档： <a href="https://typedoc.org/">typedoc</a></p>
 				</blockquote>
 			</div>
-			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee/packages/helper&quot;,&quot;tsconfig&quot;:&quot;./tsconfig.json&quot;,&quot;entryPoints&quot;:[&quot;./src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./docs/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;./docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee-helper&quot;,&quot;tsconfig&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee-helper/tsconfig.json&quot;,&quot;packages&quot;:[],&quot;entryPoints&quot;:[&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee-helper/src/index.ts&quot;],&quot;exclude&quot;:[],&quot;externalPattern&quot;:[&quot;**/node_modules/**&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee-helper/docs/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;eevee-helper&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;/Users/liusixin/Desktop/zhongtai-fe/eevee-helper/docs/index.md&quot;,&quot;defaultCategory&quot;:&quot;other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;sort&quot;:[&quot;kind&quot;,&quot;instance-first&quot;,&quot;alphabetical&quot;],&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;treatWarningsAsErrors&quot;:false,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -489,6 +492,15 @@
 					</li>
 					<li class=" tsd-kind-reference root">
 						<a href="modules.html#sethttpconfig" class="tsd-kind-icon">set<wbr>Http<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-enum root">
+						<a href="enums/businessline.html" class="tsd-kind-icon">Business<wbr>Line</a>
+					</li>
+					<li class=" tsd-kind-enum root">
+						<a href="enums/businesstype.html" class="tsd-kind-icon">Business<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum root">
+						<a href="enums/downloadmethodenum.html" class="tsd-kind-icon">Download<wbr>Method<wbr>Enum</a>
 					</li>
 					<li class=" tsd-kind-enum root">
 						<a href="enums/eventtypeenum.html" class="tsd-kind-icon">Event<wbr>Type<wbr>Enum</a>
@@ -509,7 +521,13 @@
 						<a href="enums/pomelochannelenum.html" class="tsd-kind-icon">Pomelo<wbr>Channel<wbr>Enum</a>
 					</li>
 					<li class=" tsd-kind-enum root">
-						<a href="enums/pomelochannelkeyenum.html" class="tsd-kind-icon">Pomelo<wbr>Channel<wbr>Key<wbr>Enum</a>
+						<a href="enums/pomelochanneltypeenum.html" class="tsd-kind-icon">Pomelo<wbr>Channel<wbr>Type<wbr>Enum</a>
+					</li>
+					<li class=" tsd-kind-enum root">
+						<a href="enums/reporttype.html" class="tsd-kind-icon">Report<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-enum root">
+						<a href="enums/secondlogtype.html" class="tsd-kind-icon">Second<wbr>Log<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum root">
 						<a href="enums/winmodeenum.html" class="tsd-kind-icon">Win<wbr>Mode<wbr>Enum</a>
@@ -526,14 +544,11 @@
 					<li class=" tsd-kind-class root">
 						<a href="classes/indexeddb.html" class="tsd-kind-icon">IndexedDB</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-external root">
-						<a href="classes/localstoragecache.html" class="tsd-kind-icon">Local<wbr>Storage<wbr>Cache</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter tsd-is-external root">
-						<a href="classes/swrvcache.html" class="tsd-kind-icon">SWRVCache</a>
-					</li>
 					<li class=" tsd-kind-class root">
 						<a href="classes/storage.html" class="tsd-kind-icon">Storage</a>
+					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/basesysteminforesult.html" class="tsd-kind-icon">Base<wbr>System<wbr>Info<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/config.html" class="tsd-kind-icon">Config</a>
@@ -546,6 +561,15 @@
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/database.html" class="tsd-kind-icon">Database</a>
+					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/diskinfo.html" class="tsd-kind-icon">Disk<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/gpuinfo.html" class="tsd-kind-icon">Gpu<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/hardware.html" class="tsd-kind-icon">Hardware</a>
 					</li>
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/iinitsdkargs.html" class="tsd-kind-icon">IInit<wbr>Sdk<wbr>Args</a>
@@ -563,6 +587,9 @@
 						<a href="interfaces/initzbyargs.html" class="tsd-kind-icon">Init<wbr>Zby<wbr>Args</a>
 					</li>
 					<li class=" tsd-kind-interface root">
+						<a href="interfaces/netinfo.html" class="tsd-kind-icon">Net<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface root">
 						<a href="interfaces/pomeloconnectparams.html" class="tsd-kind-icon">Pomelo<wbr>Connect<wbr>Params</a>
 					</li>
 					<li class=" tsd-kind-interface root">
@@ -577,8 +604,17 @@
 					<li class=" tsd-kind-interface root">
 						<a href="interfaces/setwinsizeopt.html" class="tsd-kind-icon">Set<wbr>Win<wbr>Size<wbr>Opt</a>
 					</li>
+					<li class=" tsd-kind-interface root">
+						<a href="interfaces/systeminfo.html" class="tsd-kind-icon">System<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-type-alias root">
+						<a href="modules.html#basesysteminfotype" class="tsd-kind-icon">Base<wbr>System<wbr>Info<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-type-alias root">
 						<a href="modules.html#channelkey" class="tsd-kind-icon">Channel<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-type-alias root">
+						<a href="modules.html#channeltype" class="tsd-kind-icon">Channel<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias root">
 						<a href="modules.html#databasemodulenames" class="tsd-kind-icon">Database<wbr>Module<wbr>Names</a>
@@ -588,6 +624,12 @@
 					</li>
 					<li class=" tsd-kind-type-alias root">
 						<a href="modules.html#pomelostorekey" class="tsd-kind-icon">Pomelo<wbr>Store<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter root">
+						<a href="modules.html#pomelostorevalue" class="tsd-kind-icon">Pomelo<wbr>Store<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter root">
+						<a href="modules.html#pomelostorevalueofsingle" class="tsd-kind-icon">Pomelo<wbr>Store<wbr>Value<wbr>OfSingle</a>
 					</li>
 					<li class=" tsd-kind-type-alias root">
 						<a href="modules.html#sdktype" class="tsd-kind-icon">Sdk<wbr>Type</a>
@@ -620,7 +662,13 @@
 						<a href="modules.html#closeglobalprint" class="tsd-kind-icon">close<wbr>Global<wbr>Print</a>
 					</li>
 					<li class=" tsd-kind-function root">
+						<a href="modules.html#compress" class="tsd-kind-icon">compress</a>
+					</li>
+					<li class=" tsd-kind-function root">
 						<a href="modules.html#copy" class="tsd-kind-icon">copy</a>
+					</li>
+					<li class=" tsd-kind-function root">
+						<a href="modules.html#dataurltofile" class="tsd-kind-icon">dataURLto<wbr>File</a>
 					</li>
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#dateformat" class="tsd-kind-icon">date<wbr>Format</a>
@@ -634,8 +682,17 @@
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#formularender" class="tsd-kind-icon">formula<wbr>Render</a>
 					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external root">
-						<a href="modules.html#mutate" class="tsd-kind-icon">mutate</a>
+					<li class=" tsd-kind-function root">
+						<a href="modules.html#getlenrandom" class="tsd-kind-icon">get<wbr>Len<wbr>Random</a>
+					</li>
+					<li class=" tsd-kind-function root">
+						<a href="modules.html#hasownproperty" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-function root">
+						<a href="modules.html#initeventlistener" class="tsd-kind-icon">init<wbr>Event<wbr>Listener</a>
+					</li>
+					<li class=" tsd-kind-function root">
+						<a href="modules.html#isvalidjson" class="tsd-kind-icon">is<wbr>ValidJSON</a>
 					</li>
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#openglobalprint" class="tsd-kind-icon">open<wbr>Global<wbr>Print</a>
@@ -661,14 +718,20 @@
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#usecountdown" class="tsd-kind-icon">use<wbr>Count<wbr>Down</a>
 					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external root">
+						<a href="modules.html#useloadmore" class="tsd-kind-icon">use<wbr>Load<wbr>More</a>
+					</li>
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#usenative" class="tsd-kind-icon">use<wbr>Native</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external root">
+						<a href="modules.html#usepagination" class="tsd-kind-icon">use<wbr>Pagination</a>
 					</li>
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#usepomelo" class="tsd-kind-icon">use<wbr>Pomelo</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-external root">
-						<a href="modules.html#useswrv" class="tsd-kind-icon">useSWRV</a>
+						<a href="modules.html#userequest" class="tsd-kind-icon">use<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-function root">
 						<a href="modules.html#usetimeout" class="tsd-kind-icon">use<wbr>Timeout</a>
