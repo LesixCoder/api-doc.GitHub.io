@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>pomelo | eevee-helper - v0.0.2-beta.10</title>
+	<title>pomelo | eevee-helper - v0.0.2-beta.21</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -25,7 +25,7 @@
 					</ul>
 					<ul class="results-priority" style="display:none">
 					</ul>
-					<a href="../index.html" class="title">eevee-helper - v0.0.2-beta.10</a>
+					<a href="../index.html" class="title">eevee-helper - v0.0.2-beta.21</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -101,12 +101,13 @@
 						<section class="tsd-index-section ">
 							<h3>other Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#recoverMessage" class="tsd-kind-icon">recover<wbr>Message</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#sendMessage" class="tsd-kind-icon">send<wbr>Message</a></li>
 							</ul>
 							<h3>pomelo Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#initpomelochannel" class="tsd-kind-icon">init<wbr>Pomelo<wbr>Channel</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#resetpomelostates" class="tsd-kind-icon">reset<wbr>Pomelo<wbr>States</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#initPomeloChannel" class="tsd-kind-icon">init<wbr>Pomelo<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="pomelo.html#resetPomeloStates" class="tsd-kind-icon">reset<wbr>Pomelo<wbr>States</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,10 +116,33 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>other Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
-					<a name="sendmessage" class="tsd-anchor"></a>
+					<a name="recoverMessage" class="tsd-anchor"></a>
+					<h3>recover<wbr>Message</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">recover<wbr>Message<span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>params: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>channelKey: <a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="sendMessage" class="tsd-anchor"></a>
 					<h3>send<wbr>Message</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Message<span class="tsd-signature-symbol">(</span>sendData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Message<span class="tsd-signature-symbol">(</span>sendData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -130,7 +154,7 @@
 									<h5>sendData: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>channelKey: <a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a></h5>
+									<h5>channelKey: <a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -141,10 +165,10 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>pomelo Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
-					<a name="initpomelochannel" class="tsd-anchor"></a>
+					<a name="initPomeloChannel" class="tsd-anchor"></a>
 					<h3>init<wbr>Pomelo<wbr>Channel</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">init<wbr>Pomelo<wbr>Channel<span class="tsd-signature-symbol">(</span>connectParams<span class="tsd-signature-symbol">: </span><a href="../interfaces/pomeloconnectparams.html" class="tsd-signature-type">PomeloConnectParams</a>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Pomelo<wbr>Channel<span class="tsd-signature-symbol">(</span>connectParams<span class="tsd-signature-symbol">: </span><a href="../interfaces/PomeloConnectParams.html" class="tsd-signature-type">PomeloConnectParams</a>, channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -162,13 +186,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>connectParams: <a href="../interfaces/pomeloconnectparams.html" class="tsd-signature-type">PomeloConnectParams</a></h5>
+									<h5>connectParams: <a href="../interfaces/PomeloConnectParams.html" class="tsd-signature-type">PomeloConnectParams</a></h5>
 									<div class="tsd-comment tsd-typography tsd-comment-text">
 										<p>频道参数</p>
 									</div>
 								</li>
 								<li>
-									<h5>channelKey: <a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a></h5>
+									<h5>channelKey: <a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -195,10 +219,10 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
-					<a name="resetpomelostates" class="tsd-anchor"></a>
+					<a name="resetPomeloStates" class="tsd-anchor"></a>
 					<h3>reset<wbr>Pomelo<wbr>States</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Pomelo<wbr>States<span class="tsd-signature-symbol">(</span>channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Pomelo<wbr>States<span class="tsd-signature-symbol">(</span>channelKey<span class="tsd-signature-symbol">: </span><a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -216,7 +240,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>channelKey: <a href="../modules.html#channelkey" class="tsd-signature-type">ChannelKey</a></h5>
+									<h5>channelKey: <a href="../modules.html#ChannelKey" class="tsd-signature-type">ChannelKey</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -234,13 +258,16 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
-						<a href="pomelo.html#initpomelochannel" class="tsd-kind-icon">init<wbr>Pomelo<wbr>Channel</a>
+						<a href="pomelo.html#initPomeloChannel" class="tsd-kind-icon">init<wbr>Pomelo<wbr>Channel</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
-						<a href="pomelo.html#resetpomelostates" class="tsd-kind-icon">reset<wbr>Pomelo<wbr>States</a>
+						<a href="pomelo.html#recoverMessage" class="tsd-kind-icon">recover<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
-						<a href="pomelo.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a>
+						<a href="pomelo.html#resetPomeloStates" class="tsd-kind-icon">reset<wbr>Pomelo<wbr>States</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace root">
+						<a href="pomelo.html#sendMessage" class="tsd-kind-icon">send<wbr>Message</a>
 					</li>
 				</ul>
 			</nav>
